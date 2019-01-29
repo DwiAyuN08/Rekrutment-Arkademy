@@ -1,0 +1,2 @@
+SELECT id_categories,name,hobi FROM `categories` natural join `hobies` 
+WHERE `categories`.`id_categories`=`hobies`.`id_categories` ORDER BY id_categories

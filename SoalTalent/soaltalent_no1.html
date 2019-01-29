@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>BIODATA DIRI</title>
+<script type='text/javascript'>
+    var JSON_ayu = {
+                        nama:'Dwi Ayu Ningrum',
+                        alamat:'Desa Jombok Kecamatan Ngantang kabupaten Malang',
+                        status_nikah:false,
+                        hobi:['Joging ',' Skipping ',' Belajar Desain website '],
+                        scholl:{Sekolah:'SMK PGRI 3 MALANG', Universitas:'-'},
+                        skill:[
+                                    {Menguasai:'Bahasa Pemograman HTML', Memahami:'Bahasa Pemograman HTML'},
+                                    {Menguasai:'CSS', Memahami:'CSS'},
+                                    {Menguasai:'Desain Website dan RWD (Responsive Web Desain)', Memahami:'Desain Website dan RWD (Responsive Web Desain)'},
+                                    {Menguasai:'-', Memahami:'Bahasa Pemograman PHP'}
+                            ]
+                   };
+                    
+    var nikah;
+     
+    if(JSON_ayu.status_nikah){
+        nikah = "Sudah Nikah";
+    }else{
+        nikah = "Belum Nikah";
+    }
+     
+    document.write("Name &nbsp &nbsp &nbsp: &nbsp"+JSON_ayu.nama +"<br />");
+    document.write("Address &nbsp : &nbsp"+JSON_ayu.alamat +"<br />");
+    document.write("Hobbies  &nbsp &nbsp &nbsp:&nbsp"+JSON_ayu.hobi+ "<br />");
+    document.write("Is Married  &nbsp  &nbsp:&nbsp "+nikah+ "<br />");
+    document.write("School  &nbsp  &nbsp:&nbsp "+JSON_ayu.scholl.Sekolah+ " Kuliah Di " + JSON_ayu.scholl.Universitas + "<br />");
+    document.write("Skill : <br />");
+    document.write("<ol>")
+    for(var i=0; i<JSON_ayu.skill.length; i++){
+        document.write("<li>"+ " Menguasai Tentang "  + JSON_ayu.skill[i].Menguasai + " Memahami Tentang " + JSON_ayu.skill[i].Memahami + "</li>");
+    }
+    document.write("</ol>")
+     
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,13 @@
+package main
+
+import "fmt"
+import "strings"
+
+func main() {
+    var text = "kelompok"
+		var find = "o"
+		var replaceWith = "a"
+
+		var newText1 = strings.Replace(text, find, replaceWith, 1)
+		fmt.Println(newText1) // "bonana"
+}

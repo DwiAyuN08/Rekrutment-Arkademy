@@ -1,0 +1,82 @@
+.foto {
+    width: 100%;
+    height: 110px;
+    padding: 0px 345px;
+}
+.kotaknya{
+	min-height: 500px;
+}
+.header{
+	min-height: 550px;
+}
+.navbar-default {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    padding-left: 43px;
+    padding-right: 30px;
+    padding-top: 10px;
+}
+.container-fluid {
+  background-color:#ffffff;
+  min-height: 65px;
+}
+.navbar-brand img{
+  width: 21px;
+  margin-top: -2px;
+}
+.navbar-default .navbar-brand#judul {
+    font-weight: bold;
+    text-decoration: none;
+    padding-top: 21px;
+    color: #EE7373;
+    font-family:'Marck Script', cursive;
+    font-size: 21pt;
+    padding-left: 5px;
+}
+.navbar-default .navbar-brand#judul:hover{
+    color: #CC5353;
+    opacity: 0.7;
+}
+.navbar-default .navbar-brand#logo {
+  margin-left: -25px;
+}
+.navbar-nav {
+    float: left;
+    margin: 0;
+    margin-left: 60px;
+    padding-top: 9px;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #777;
+}
+.navbar-default .navbar-nav>li>a:hover {
+    color: #EE7373;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: #EE7373;
+    background-color: transparent;
+}
+.navbar-nav>.open>a:hover{
+    color: #ffffff;
+    background-color: #650b93;
+}
+ul.nav.navbar-nav.navbar-right li a .btn-warning{
+  background-color:#EE7373;
+  border-color:#EE7373;
+  margin-top: -10px;
+}
+ul.nav.navbar-nav.navbar-right li a .btn-info{
+  background-color:#F1F1F1 ;
+  border-color:#F1F1F1;
+  margin-top: -10px;
+  color:#777;
+}
+ul.nav.navbar-nav.navbar-right li a .btn-warning:hover{
+  background-color:#CC5353 ;
+  border-color:#CC5353;
+}
+ul.nav.navbar-nav.navbar-right li a .btn-info:hover{
+  background-color:#E3E3E3 ;
+  border-color:#E3E3E3;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Siswa</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon"> 
+    <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body style="background:url(assets/images/bg.png);">
+<div class="container box"><br>
+    <h2 id="his"  align="center">Data Hobbi Siswa</h2><br>
+    <div class="container">
+        <br><br>
+        <form method="post" class="form-horizontal">
+            <div class="form-group">
+                <div class="col-lg-6">
+                    <a href="form_simpan.php" class="btn btn-success btn-danger" style="background-color:#888ccc;border-color:#888ccc; "><i class="glyphicon glyphicon-plus"></i>&nbsp Tambah Data Siswa</a>
+                </div>
+                <div class="col-lg-2" style="padding-left: 25px;">
+                    <label class="control-label">&nbsp &nbsp Cari Katalog Buku :</label>
+                </div>
+                <div class="col-lg-2" style="padding: 0px;">
+                    <input type="text" name="cari_data" placeholder="Search..." class="form-control">
+                </div>
+                <div class="col-lg-2">
+                    <input type="submit" class="btn btn-danger btn-default" name="cari" value="Cari" style="background-color:#EE7373;border-color:#EE7373; ">
+                    <a href="view.php" class="btn btn-info btn-default" style="background-color:#882323;border-color:#882323; "><i class="glyphicon glyphicon-refresh"></i> Reset</a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="container">
+      <?php require_once 'config.php' ?>
+        <form action="" method="post">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Name</th>
+                    <th>Hobi</th>
+                    <th colspan="3">Opsi</th>
+                </tr>
+            </thead>
+          
+            <tbody>
+            <?php  
+// Perintah untuk menampilkan data
+
+$hasil= mysql_query ("SELECT * FROM categories") ;
+
+// perintah untuk membaca dan mengambil data dalam bentuk array
+while ($data = mysql_fetch_array ($hasil)){
+ echo "  
+                <tr>
+                    <td>".$data['name']."</td>
+                    <td>".$data['name']."</td>
+                    <td>".$data['name']."</td>
+                    <td><a href="form_edit.php?kode=<?= $data->id_buku ?>" class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-pencil"></i>&nbsp Update</a></td>
+                    <td><a href="detail.php?kode=<?= $data->id_buku ?>" class="btn btn-info btn-sm"><i class="glyphicon glyphicon-info-sign"></i>&nbsp Detail</a></td>
+                </tr>
+              ";
+        
+}
+
+?>
+            </tbody>
+        </table>
+        </form>
+    </div>
+</div>
+</body>
+</html>
+
